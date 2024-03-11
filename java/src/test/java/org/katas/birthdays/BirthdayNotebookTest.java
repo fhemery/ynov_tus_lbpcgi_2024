@@ -35,6 +35,7 @@ class BirthdayNotebookTest {
 
     @Test
     public void shouldReturnRecords_WhenThereAreBirthdaysRegistered() {
+        // ARRANGE == GIVEN
         var aliceBirthdate = new Date(2016, 2, 1);
         var bobBirthdate = new Date(2017, 2, 1);
         var carolBirthDate = new Date(2017, 2, 2);
@@ -42,8 +43,10 @@ class BirthdayNotebookTest {
         notebook.addBirthday("Alice", aliceBirthdate)
                 .addBirthday("Bob", bobBirthdate).addBirthday("Carol", carolBirthDate);
 
+        // ACT == WHEN
         var birthdays = notebook.getBirthdays(new Date(2024, 2, 1));
 
+        // ASSERT == THEN
         assertEquals(2, birthdays.size());
         assertTrue(birthdays.contains("Alice"));
         assertTrue(birthdays.contains("Bob"));

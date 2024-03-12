@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Receipt Printer should return a line with an added product 1`] = `
+"Apples                              7.50
+  2.50 * 3.000
+
+Total:                              7.50"
+`;
+
+exports[`Receipt Printer should return empty ticket with a receipt with no product 1`] = `
+"
+Total:                              0.00"
+`;
+
+exports[`Receipt Printer should return empty ticket with empty receipt 1`] = `
+"
+Total:                              0.00"
+`;

@@ -7,7 +7,7 @@ import TripDAO from "./TripDAO";
 export default class TripService {
     public getTripsByUser(user: User): Trip[] {
         let tripList: Trip[] = [];
-        const loggedUser: User = UserSession.getLoggedUser();
+        const loggedUser = this.getUser();
         let isFriend: boolean = false;
 
         if (loggedUser != null) {
@@ -26,5 +26,9 @@ export default class TripService {
         } else {
             throw new UserNotLoggedInException();
         }
+    }
+
+    protected getUser() {
+        return UserSession.getLoggedUser();
     }
 }

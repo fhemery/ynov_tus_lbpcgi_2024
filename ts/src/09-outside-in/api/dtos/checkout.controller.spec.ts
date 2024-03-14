@@ -7,7 +7,7 @@ import {CheckoutServiceParams} from "../../model/checkoutServiceParams";
 
 class StubCheckoutService implements ICheckoutService {
     doCheckout(params: CheckoutServiceParams): CheckoutServiceResponse {
-        return new CheckoutServiceResponse('abc');
+        return new CheckoutServiceResponse('abc', 40);
     }
 }
 

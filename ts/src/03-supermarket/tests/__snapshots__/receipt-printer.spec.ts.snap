@@ -11,8 +11,3 @@ exports[`Receipt Printer should return empty ticket with a receipt with no produ
 "
 Total:                              0.00"
 `;
-
-exports[`Receipt Printer should return empty ticket with empty receipt 1`] = `
-"
-Total:                              0.00"
-`;
